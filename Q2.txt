@@ -1,0 +1,29 @@
+Write a blog about objects and its internal representation in Javascript
+
+Objects are the representation of real-world entities in any language representing things by defining its properties along with 
+their values. In Javascript, objects may be defined as an unordered collection of related data, of primitive or reference types, 
+in the form of “key: value” pairs.
+
+Ways to create an object in javascript are as follows-
+
+Object Literal
+  object literal is a comma-separated list of name-value pairs wrapped in curly braces. Object literals encapsulate data, enclosing 
+  it in a tidy package.
+  var car={id:1 , name:’abc’ , display:function() }
+  As evident from the above example property values can be of any data type, including array literals, functions, nested object literals, 
+  or primitive data type.
+
+  Object.create()
+    The method creates a new object, using an existing object as the prototype of the newly created object.
+    using the object literal example as prototype-
+    var car2 = Object.create(car);
+    car.id=2;
+    car.name = ‘xyz’;
+
+  Object Constructor
+      Useful when we require to create multiple objects of similar type. In this case, a constructor (kind of blueprint) is created and 
+      multiple objects can be initialized using the new keyword using the constructor as a wrapper for the newly created objects.
+
+      creating objects using constructor-
+        var p1= new Person(“John”, 50, “blue”);
+        var p2= new Person(“Sally”, 48, “green”);
